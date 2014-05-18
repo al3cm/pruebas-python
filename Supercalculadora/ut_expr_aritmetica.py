@@ -13,12 +13,6 @@ class TestsExprAritmetica(unittest.TestCase):
 							  'operadores': ['+']},
 							  self.expresion.parse("2 + 2"))
 
-	def test_extraer_operandos_y_operadores_en_10_entre_menos_5(self):
-		expresion = expr_aritmetica.ExprAritmetica()
-		self.failUnlessEqual({'operandos': [10, -5],
-							  'operadores': ['/']},
-							   self.expresion.parse("10 / -5"))
-
 	def test_extraer_operandos_y_operadores_expr_sin_ptesis(self):
 		self.failUnlessEqual({'operandos': [5, 4, 2, 2],
 							  'operadores': ['+','*','/']},
